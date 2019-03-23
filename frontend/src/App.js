@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
   
   onClick(ev) {
     console.log("Sending a GET API Call !!!");
-    axios.get('http://localhost:8000/templates')
+    axios.get('http://localhost:8000/test')
     .then(res => {
             console.log(res.json())
     }).then(response => {
