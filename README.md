@@ -14,7 +14,7 @@ Download as a zip for using the repository command-line free. Cloning allows you
 
 ## Getting set up
 
-1. Go to **BitBucket** website and Click on '**Clone in Sourcetree**'
+1. Go to **BitBucket** website and Click on '**Clone**'
 2. Install **Microsoft Visual Studio Code** (VS Code)
 3. Install VS Code **Python Extenstion**
 4. Install **Python v3.x** and Add Python to Path (Advanced System Settings > Advanced (Tab) > 'Environment Variables..')
