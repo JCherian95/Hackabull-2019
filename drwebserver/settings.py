@@ -25,7 +25,7 @@ SECRET_KEY = '+1@atf=-sa7#_bv5&xc_5otsd@cw57rmg=_iypc=j3hy)sc^@q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.test', 'diaster.relief']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.test', 'disaster.relief']
 SITE_TITLE = 'Disaster Relief'
 
 # Application definition
