@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from reliefbase import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
 ]
+
+admin.site.site_header = 'Reliefbase WebServer Administration'
+admin.site.site_title = 'Reliefbase WebServer'
+admin.site.index_title = 'Reliefbase WebServer Administration'
