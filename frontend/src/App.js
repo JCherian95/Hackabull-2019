@@ -7,7 +7,7 @@ class App extends Component {
   render() {
       return (
       <div>
-        <button type="button" onClick={this.onClick}>Send GET</button>
+        <button type="button" onClick={this.onClick} class="btn btn-primary">Send GET</button>
       </div>
       );
   }
