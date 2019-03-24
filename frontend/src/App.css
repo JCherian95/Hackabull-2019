@@ -57,5 +57,14 @@
 }
 
 .btn-primary:active {
-  background-color: #734646 !important;
+  background-color: #734646;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
 }
