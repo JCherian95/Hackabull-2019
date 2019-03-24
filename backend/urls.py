@@ -1,29 +1,21 @@
-"""backend URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+from django.conf import settings
+from django.conf.urls.static import static
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.urls import path
-from backend import views
+
+from item.api.views import ItemListAPIView
+from item.views import item_list, home
+from item import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('', views.ReactAppView.as_view()),
-    path('', views.db, name='db'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^home/', home),
+    url(r'^$', item_list),
+    url(r'^api/', ItemListAPIView.as_view()),
+    url(r'^', views.ReactAppView.as_view()),
+
 ]
 
-admin.site.site_header = 'Reliefbase WebServer Administration'
-admin.site.site_title = 'Reliefbase WebServer'
-admin.site.index_title = 'Reliefbase WebServer Administration'
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
-      return (
-      <div className="mx-auto text-center">
-        <button type="button" onClick={this.componentDidMount} className="btn btn-primary">Send GET</button>
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <button type="button" onClick={this.onClick}>Send GET api</button>
+        </header>
       </div>
-      );
+    );
   }
-  
-  componentDidMount() {
+
+  onClick(ev) {
     console.log("Sending a GET API Call !!!");
-    axios.get('http://localhost:8000/db.json')
-    .then(response => {
-      console.log(response)
-      this.setState({ideas: response.data})
-    }).then(json => console.log(json)
-    ).catch(error => console.log(error))
+    axios.get('http://127.0.0.1:8000/api/?format=json')
+    .then(res => {
+      console.log(res);
+    }).then(response => {
+      console.log(JSON.stringify(response));
+    })    
   }
-  
 }
+
+
 
 export default App;
