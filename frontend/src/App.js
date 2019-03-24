@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <button type="button" onClick={this.onClick}>Send GET api</button>
+          <button type="button" className="btn btn-primary" onClick={this.onClick}>Send GET api</button>
         </header>
       </div>
     );
