@@ -9,7 +9,8 @@ def item_list(request):
 	context = {
 		'name': 'Water',
 		'quantity': 25,
-		'location': 'Walmart'
+		'lat': 28.068908,
+        'long': -82.428225
 	}
 	return JsonResponse(context)
 

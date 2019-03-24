@@ -5,7 +5,8 @@ from django.db import models
 class EssentialItem(models.Model):
 	name = models.CharField(max_length=120)
 	quantity = models.IntegerField()
-	location = models.TextField()
+	lat = models.IntegerField()
+	long = models.IntegerField()
 
 	def __str__(self):
 		return self.name
