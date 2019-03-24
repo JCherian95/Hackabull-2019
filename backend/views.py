@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'index.html')
 
 def db(request):
-    return render(request, 'db.json')
+    return render(request, '../db.json')
 
 class ReactAppView(View):
     
