@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './Map/Map';
 import HomeScreen from './HomeScreen/HomeScreen';
-import MainScreen from './MainScreen/Mainscreen';
 
 class App extends Component {
 
@@ -27,7 +26,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <MainScreen/> */}
         {this.state.mapOpen ? 
         <Map toggleMap={this.toggleMap.bind(this)} item={this.state.item}/> :
         <HomeScreen 
