@@ -20,6 +20,7 @@ from reliefbase import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('', views.ReactAppView.as_view()),
 ]
 
 admin.site.site_header = 'Reliefbase WebServer Administration'

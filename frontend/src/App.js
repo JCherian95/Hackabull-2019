@@ -14,7 +14,7 @@ class App extends Component {
   
   onClick(ev) {
     console.log("Sending a GET API Call !!!");
-    axios.get('http://localhost:8000/templates')
+    axios.get('http://localhost:8000/products')
     .then(res => {
             console.log(res.json())
     }).then(response => {

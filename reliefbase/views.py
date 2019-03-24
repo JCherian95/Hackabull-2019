@@ -1,12 +1,27 @@
-from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.forms import UserChangeForm
-from django.contrib.auth import get_user_model
-from django.core.exceptions import ValidationError
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
+from django.views.generic import View
+from django.http import HttpResponse
+from django.conf import settings
+import os 
 
 def index(request):
     return render(request, 'index.html')
+
+class ReactAppView(View):
+    
+    def get(self, request):
+        try:
+
+            with open(os.path.join(settings.REACT_APP, 'build', 'index.html')) as file:
+                return HttpResponse(file.read())
+
+        except :
+            return HttpResponse(
+                """
+                index.html not found ! build your React app !!
+                """,
+                status=501,
+            )
