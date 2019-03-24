@@ -7,14 +7,14 @@ class App extends Component {
   render() {
       return (
       <div>
-      <button type="button" onClick={this.onClick}>Send GET</button>
+        <button type="button" onClick={this.onClick}>Send GET</button>
       </div>
       );
   }
   
   onClick(ev) {
     console.log("Sending a GET API Call !!!");
-    axios.get('http://localhost:8000/test')
+    axios.get('http://localhost:8000/templates')
     .then(res => {
             console.log(res.json())
     }).then(response => {
