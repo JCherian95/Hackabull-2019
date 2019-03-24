@@ -1,0 +1,64 @@
+.Title{
+    text-align: center;
+    margin: 0;
+  }
+
+  .MainContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+.Content{
+    width: 100%;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     margin: 0;
+     text-align: center;
+}
+  
+  .SearchBar{    
+    font-size: 1.5em;
+    padding: 5px 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid gray;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .EssentialItem{
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid black;
+    border-top: none;
+  }
+
+  .EssentialItem:hover{
+      background-color: #eee;
+  }
+
+  .EssentialTitle{
+    width: 100%;
+    font-size: 1.7em;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+  }
+
+  @media (min-width: 1024px){
+      .Content{
+          width: 50%;
+      }
+  }
+
+ @media (min-width: 768px) and (max-width: 1024px){
+    .Content{
+        width: 80%;
+    }
+ }

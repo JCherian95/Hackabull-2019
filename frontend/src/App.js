@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import logo from './logo.svg';
+
 import './App.css';
+import Map from './Map/Map';
+import HomeScreen from './HomeScreen/HomeScreen';
+import MainScreen from './MainScreen/Mainscreen';
 
 class App extends Component {
+
+  state = {
+    mapOpen: false,
+    item: ""
+  }
+
+  searchItemHandler = (item) => {
+      this.setState({
+        item: item
+      })
+  }
+
+  toggleMap = () =>{
+    this.setState(prevState => ({
+      mapOpen: !prevState.mapOpen
+    }));
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <button type="button" className="btn btn-primary" onClick={this.onClick}>Send GET api</button>
-        </header>
+        {this.state.mapOpen ? 
+        <Map toggleMap={this.toggleMap.bind(this)} item={this.state.item}/> :
+        <HomeScreen 
+          toggleMap={this.toggleMap.bind(this)}
+          searchItemHandler={this.searchItemHandler.bind(this)}/>}
       </div>
     );
   }
-
-  onClick(ev) {
-    console.log("Sending a GET API Call !!!");
-    axios.get('http://127.0.0.1:8000/api/?format=json')
-    .then(res => {
-      console.log(res);
-    }).then(response => {
-      console.log(JSON.stringify(response));
-    })    
-  }
 }
-
-
 
 export default App;

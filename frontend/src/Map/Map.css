@@ -1,0 +1,109 @@
+.NavBar{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.MapContainer{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+
+.Map{
+    height: 70%;
+    width: 100%;
+}
+
+.BackMain{
+    margin: 5px 0 0 10px;
+    cursor: pointer;
+}
+
+.Back{
+    margin-left: 5px;
+}
+
+.Details{
+    height: 30%;
+    overflow: scroll;
+    width: 100%;
+    text-align: center;
+}
+
+.DetailsContent{
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.Slider{
+    margin: auto;
+    width: 80%;
+    height: 15px;
+    -webkit-appearance: none;
+    border-radius: 5px;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.Slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  .Marker {
+    font-size: 1.3em;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+	padding: 8px 10px 7px 10px;
+	background: #78c1a3;
+	box-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+
+@media (min-width:1024px){
+
+    .MapContainer{
+        flex-direction: row;
+    }
+
+    .Slider{
+        width: 20%;
+    }
+
+    .Map{
+        height: 100%;
+        width: 70%;
+    }
+
+    .Details{
+        height: 100%;
+        width: 30%;
+    }
+
+    .DetailsContent{
+        height: 33.33333%;
+    }
+
+}
+
+@media (min-width: 768px){
+    .Slider{
+        width: 40%
+    }
+
+}
