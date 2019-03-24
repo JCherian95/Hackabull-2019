@@ -10,8 +10,8 @@ import os
 def index(request):
     return render(request, 'index.html')
 
-def sample(request):
-    return render(request, 'sample.json')
+def db(request):
+    return render(request, 'db.json')
 
 class ReactAppView(View):
     

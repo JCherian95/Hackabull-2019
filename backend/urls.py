@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('', views.ReactAppView.as_view()),
-    path('', views.sample, name='sample'),
+    path('', views.db, name='db'),
 ]
 
 admin.site.site_header = 'Reliefbase WebServer Administration'

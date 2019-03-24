@@ -14,11 +14,12 @@ class App extends Component {
   
   componentDidMount() {
     console.log("Sending a GET API Call !!!");
-    axios.get('http://localhost:8000/sample')
+    axios.get('http://localhost:8000/db.json')
     .then(response => {
       console.log(response)
       this.setState({ideas: response.data})
-    }).catch(error => console.log(error))
+    }).then(json => console.log(json)
+    ).catch(error => console.log(error))
   }
   
 }
