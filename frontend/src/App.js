@@ -27,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* <MainScreen/> */}
         {this.state.mapOpen ? 
         <Map toggleMap={this.toggleMap.bind(this)} item={this.state.item}/> :
         <HomeScreen 

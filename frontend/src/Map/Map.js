@@ -70,7 +70,7 @@ class Map extends Component {
         if(this.state.itemsLoaded.length !==0){
             items = this.state.itemsLoaded.map(item =>(
                 <div className="DetailsContent">
-                    <img src={item.food.uri} />
+                    <img src={item.food.uri} alt="Food Item"/>
                     <div>{item.food.label}</div>
                     <div>{item.food.brand}</div>
                 </div>
