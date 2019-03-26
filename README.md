@@ -1,4 +1,4 @@
-# Best Hack for Social Good - Hackabull
+# Hackabull 2019
 
 ## Cloning the repository
 
